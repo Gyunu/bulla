@@ -1,0 +1,18 @@
+//These are important so that they will always override
+//This is so when we read the html and see this class, it will always be applied.
+//No guess work or cascade issues.
+@each $name, $color in $colors {
+  .has-#{$name}-bg {
+    background-color: $color !important;
+    //don't important the font color, so we can override it.
+    color: findColorInvert($color);
+  }
+
+  .has-#{$name}-text {
+    color: $color!important;
+  }
+
+  .has-#{$name}-border {
+    border: 1px solid #{$color}!important;
+  }
+}
