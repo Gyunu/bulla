@@ -51,7 +51,7 @@
     'bottom': #{$type}-bottom,
     'left': #{$type}-left,
     'right': #{$type}-right,
-    'all': (
+    'every': (
       '1': #{$type}-top,
       '2': #{$type}-bottom,
       '3': #{$type}-left,
@@ -64,8 +64,7 @@
     'vert': (
       '1': #{$type}-top,
       '2': #{$type}-bottom
-    ),
-    'none': #{$type}
+    )
   );
   @return map-get($positions, $position);
 }

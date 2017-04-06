@@ -1,16 +1,10 @@
 .section {
-  background-color: $white;
-  padding: 3rem 1.5rem;
+  background-color: map-get($colors, 'white');
+  padding: map-get($sizes, 'large') map-get($sizes, 'large');
 
-  // Responsiveness
-  @include desktop {
-    // Sizes
-    &.is-medium {
-      padding: 9rem 1.5rem;
-    }
-
-    &.is-large {
-      padding: 18rem 1.5rem;
-    }
+  &.is-fullwidth {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
+
 }

@@ -4,15 +4,35 @@
 @each $name, $color in $colors {
   .has-#{$name}-bg {
     background-color: $color !important;
-    //don't important the font color, so we can override it.
-    color: findColorInvert($color);
+    color: findColorInvert($color) !important;
   }
 
   .has-#{$name}-text {
     color: $color!important;
   }
 
-  .has-#{$name}-border {
-    border: 1px solid #{$color}!important;
+  @each $position, $position-name in $positions {
+    @if(type-of($position-name) == 'string') {
+      $b1: positions('border', $position);
+      .has-#{$name}-#{$position-name}-border {
+        #{$b1}: 1px solid #{$color} !important;
+      }
+    }
+    @if(type-of($position-name) == 'map') {
+      @if($position == 'every') {
+        .has-#{$name}-#{$position}-border {
+          border: 1px solid #{$color} !important;
+        }
+      }
+      @else {
+        $b1: positions('border', map-get($position-name, '1'));
+        $b2: positions('border', map-get($position-name, '2'));
+        .has-#{$name}-#{$position}-border {
+          #{$b1}: 1px solid #{$color} !important;
+          #{$b2}: 1px solid #{$color} !important;
+        }
+      }
+    }
   }
+
 }

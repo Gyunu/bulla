@@ -1,83 +1,66 @@
-////
-/// This is the Layout file
-/// It holds all the rules to do with positioning and layouts
-/// @author David Allen
-/// @since v1.0.0
-////
-
-
-/// This generates the utility classes .p and .m
-/// These classes can be used in the html file where needed to change the padding [.p] and margin [.m]
+/// This generates the utility classes .has-{size}-{position}-padding .has-{size}-{position}-margin
+/// These classes can be used in the html file where needed to change the padding and margin
 /// @example
-///  .m-u-xl = universal margin at xl size
-///  .p-l-s = left padding at s size
+///  .has-huge-all-padding = huge sized padding in every direction
+///  .has-small-bottom-margin = small margin at the bottom
 @each $position, $position-name in $positions {
   @if(type-of($position-name) == 'string') {
-    .has-padding-#{$position} {
-      $p: positions('padding', $position);
-
-      @if($position == 'none') {
-        #{$p}: #{map-get($sizes, $position)};
+    $p: positions('padding', $position);
+    $m: positions('margin', $position);
+    @each $size-letter, $size in $sizes {
+      .has-#{$size-letter}-#{$position-name}-padding {
+        #{$p}: #{$size};
       }
-      @else {
-        @each $size-letter, $size in $sizes {
-          &-#{$size-letter} {
-            #{$p}: #{$size};
-          }
-        }
-      }
-    }
 
-    .has-margin-#{$position} {
-      $p: positions('margin', $position);
-
-      @if($position == 'none') {
-        #{$p}: #{map-get($sizes, $position)};
-      }
-      @else {
-        @each $size-letter, $size in $sizes {
-          &-#{$size-letter} {
-            #{$p}: #{$size};
-          }
-        }
+      .has-#{$size-letter}-#{$position-name}-margin {
+        #{$m}: #{$size};
       }
     }
   }
   @if(type-of($position-name) == 'map') {
-    .has-margin-#{$position} {
+
+    @if($position == 'every') {
+      $p1: positions('padding', map-get($position-name, '1'));
+      $p2: positions('padding', map-get($position-name, '2'));
+      $p3: positions('padding', map-get($position-name, '3'));
+      $p4: positions('padding', map-get($position-name, '4'));
+      $m1: positions('margin', map-get($position-name, '1'));
+      $m2: positions('margin', map-get($position-name, '2'));
+      $m3: positions('margin', map-get($position-name, '3'));
+      $m4: positions('margin', map-get($position-name, '4'));
+
       @each $size-letter, $size in $sizes {
-        &-#{$size-letter} {
-          $p1: positions('margin', map-get($position-name, '1'));
-          $p2: positions('margin', map-get($position-name, '2'));
+
+        .has-#{$size-letter}-#{$position}-padding {
           #{$p1}: #{$size};
           #{$p2}: #{$size};
+          #{$p3}: #{$size};
+          #{$p4}: #{$size};
+        }
 
-          @if($position == 'all') {
-            $p3: positions('margin', map-get($position-name, '3'));
-            $p4: positions('margin', map-get($position-name, '4'));
-            #{$p3}: #{$size};
-            #{$p4}: #{$size};
-          }
+        .has-#{$size-letter}-#{$position}-margin {
+          #{$m1}: #{$size};
+          #{$m2}: #{$size};
+          #{$m3}: #{$size};
+          #{$m4}: #{$size};
         }
       }
     }
+    @else {
+      $p1: positions('padding', map-get($position-name, '1'));
+      $p2: positions('padding', map-get($position-name, '2'));
+      $m1: positions('margin', map-get($position-name, '1'));
+      $m2: positions('margin', map-get($position-name, '2'));
 
-    .has-padding-#{$position} {
       @each $size-letter, $size in $sizes {
-        &-#{$size-letter} {
-          $p1: positions('padding', map-get($position-name, '1'));
-          $p2: positions('padding', map-get($position-name, '2'));
+        .has-#{$size-letter}-#{$position}-padding {
           #{$p1}: #{$size};
           #{$p2}: #{$size};
+        }
 
-          @if($position == 'all') {
-            $p3: positions('padding', map-get($position-name, '3'));
-            $p4: positions('padding', map-get($position-name, '4'));
-            #{$p3}: #{$size};
-            #{$p4}: #{$size};
-          }
-
-
+        .has-#{$size-letter}-#{$position}-margin {
+          #{$m1}: #{$size};
+          #{$m2}: #{$size};
         }
       }
     }

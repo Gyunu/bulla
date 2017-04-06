@@ -3,7 +3,7 @@ $nav-height: 3.25rem !default;
 // Components
 
 .nav-toggle {
-  @include hamburger($nav-height);
+  @include hamburger(map-get($sizes, 'large'));
 
   // Responsiveness
   @include tablet {
@@ -16,10 +16,9 @@ $nav-height: 3.25rem !default;
   display: flex;
   flex-grow: 0;
   flex-shrink: 0;
-  font-size: $size-normal;
   justify-content: center;
   line-height: 1.5;
-  padding: 0.5rem 0.75rem;
+  padding: map-get($sizes, 'large') map-get($sizes, 'large');
 
   a {
     flex-grow: 1;
@@ -48,34 +47,34 @@ $nav-height: 3.25rem !default;
 
 .nav-item a,
 a.nav-item {
-  color: $text-light;
+  color: inherit;
 
   &:hover {
-    color: $link-hover;
+    color: map-get($colors, 'primary');
+    
   }
 
   // Modifiers
   &.is-active {
-    color: $link-active;
+    color: inherit;
   }
 
   &.is-tab {
     border-bottom: 1px solid transparent;
     border-top: 1px solid transparent;
-    padding-bottom: calc(0.75rem - 1px);
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: calc(0.75rem - 1px);
+    padding-bottom: map-get($sizes, 'small');
+    padding-left: map-get($sizes, 'small');
+    padding-right: map-get($sizes, 'small');
+    padding-top: map-get($sizes, 'small');
 
     &:hover {
-      border-bottom-color: $primary;
+      border-bottom-color: map-get($colors, 'primary');
       border-top-color: transparent;
     }
 
     &.is-active {
-      border-bottom: 3px solid $primary;
-      color: $primary;
-      padding-bottom: calc(0.75rem - 3px);
+      border-bottom: 3px solid map-get($colors, 'primary');
+      color: map-get($colors, 'primary');
     }
   }
 
@@ -121,8 +120,7 @@ a.nav-item {
   // Responsiveness
   @include mobile {
     &.nav-right {
-      background-color: $white;
-      box-shadow: 0 4px 7px rgba($black, 0.1);
+      background-color: map-get($colors, 'white');
       left: 0;
       display: none;
       right: 0;
@@ -130,7 +128,7 @@ a.nav-item {
       position: absolute;
 
       .nav-item {
-        border-top: 1px solid rgba($border, 0.5);
+        border-top: 1px solid rgba(map-get($colors, 'black'), 0.5);
         padding: 0.75rem;
       }
 
@@ -145,7 +143,7 @@ a.nav-item {
 
 .nav {
   align-items: stretch;
-  background-color: $white;
+  background-color: map-get($colors, 'white');
   display: flex;
   min-height: $nav-height;
   position: relative;
@@ -157,10 +155,5 @@ a.nav-item {
     display: flex;
     min-height: $nav-height;
     width: 100%;
-  }
-
-  // Modifiers
-  &.has-shadow {
-    box-shadow: 0 2px 3px rgba($black, 0.1);
   }
 }

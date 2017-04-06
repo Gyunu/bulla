@@ -1,30 +1,25 @@
-////
-/// This is the sass config variables file.
-/// It contains all the sass variables used throughout the partials
-/// @author David Allen
-/// @since v1.0.0
-////
-
-
-
-
-
 // Fonts
-
-/// This is a map of all fonts used in the website
-/// It's used in a variety of mixins to generate classes for fonts
-/// Access properties where needed with map-get($fonts, 'property')
-$fonts: (
-  'light': '',
-  'regular': ''
+$fonts-default: (
+  'light': sans-serif,
+  'primary': sans-serif,
+  'italic': sans-serif,
+  'bold': sans-serif,
+  'mono': monospace,
 );
 
-
+$fonts: () !default;
+$fonts: map-merge($fonts-default, $fonts);
+@debug $fonts;
 // Sizes
 
 /// This is the baseline size used to base other measurements on.
 /// For things like margings, padding and font size.
-$baseline: 16px;
+$baseline-font: 16px !default;
+$baseline: 2rem !default;
+// This is the amount of columns defined for the grid system
+$columns: 12 !default;
+//layers - z-index
+$layers: 10 !default;
 
 
 // Colors
@@ -32,10 +27,10 @@ $basecolor: #19C4FF;
 /// This is a map of all colors used in the website
 /// It's used in a variety of mixins to generate classes for text color, background color and border color
 /// Access properties where needed with map-get($colors, 'property')
-$colors: (
+$color-names: (
   'white': #fff,
-  'black': #333,
-  'grey': #ccc,
+  'black': #4a4a4a,
+  'grey': #ddd,
   'orange': hsl(14, 100%, 53%),
   'yellow': hsl(48, 100%, 67%),
   'green': hsl(141, 71%, 48%),
@@ -45,7 +40,18 @@ $colors: (
   'red': hsl(348, 100%, 61%)
 );
 
+$color-interface: (
+  'primary': map-get($color-names, 'turquoise'),
+  'info': map-get($color-names, 'blue'),
+  'success': map-get($color-names, 'green'),
+  'warning': map-get($color-names, 'yellow'),
+  'danger': map-get($color-names, 'red')
+);
 
+$colors: () !default;
+
+$colors: map-merge($color-names, $colors);
+$colors: map-merge($color-interface, $colors);
 
 // Sizing and Positioning
 
@@ -53,7 +59,9 @@ $colors: (
 /// It's used in the m() and p() mixins to generate the required property sizes, based on the basline variable
 /// It's also used to generate utility css selectors like .m-u-m (medium, universal margin).
 /// Access properties where needed with map-get($sizes, 'property')
-$sizes: (
+
+
+$size-default: (
   'tiny': $baseline * .2,
   'xsmall': $baseline * .4,
   'small':	$baseline * .6,
@@ -64,16 +72,25 @@ $sizes: (
   'giant': $baseline * 5,
 );
 
+$sizes: () !default;
+$sizes: map-merge($size-default, $sizes);
+
+$position: (
+  'absolute',
+  'relative',
+  'fixed'
+);
+
 
 /// This is a map of all positions used in the utility css selectors
-/// It's used in the m() and p() mixins to generate the required property positions
+/// It's used in mixins and generators
 /// Access properties where needed with map-get($positions, 'property')
 $positions: (
   'top': 'top',
   'bottom': 'bottom',
   'left': 'left',
   'right': 'right',
-  'all': (
+  'every': (
     '1': 'top',
     '2': 'bottom',
     '3': 'left',
@@ -89,41 +106,24 @@ $positions: (
   )
 );
 
-//media queries - http://mydevice.io/devices/
 $media: (
-  'xs': 0, //320px - smallest device screen size
-  's': 37.5em, //600px, - smallest tablet screen size
-  'm': 75em, //1200px
-  'l': 100em, //1600px
-  'xl': 130em
+  'tablet': 796px,
+  'desktop': 1000px,
+  'widescreen': 1192px,
+  'fullhd': 1384px
 );
 
-$display: (
-  'i': 'inline',
-  'ib': 'inline-block',
-  'if': 'inline-flex',
-  'b': 'block',
-  'f': 'flex',
-  't': 'table',
-  'l': 'list-item',
-  'r': 'run-in',
-  'tc': 'table-cell',
-  'n': 'none',
-  'ih': 'inherit',
-  'in': 'initial'
+$displays: (
+  'inline': 'inline',
+  'inline-b': 'inline-block',
+  'inline-f': 'inline-flex',
+  'block': 'block',
+  'flex': 'flex',
+  'table': 'table',
+  'list': 'list-item',
+  'run-in': 'run-in',
+  'table-cell': 'table-cell',
+  'none': 'none',
+  'inherit': 'inherit',
+  'init': 'initial'
 );
-
-$shades: (
-  'normal': 0,
-  'dark': 5%,
-  'darker': 10%,
-  'darkest': 15%
-);
-
-/// This is the amount of columns defined for the grid system
-$columns: 12;
-/// The width of each column in %
-$column-width: 100 / $columns;
-
-//layers - z-index
-$layers: 10;

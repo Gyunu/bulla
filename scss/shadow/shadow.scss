@@ -1,0 +1,5 @@
+@each $name, $size in $sizes {
+  .has-#{$name}-shadow {
+    box-shadow: 0 #{$size / 3} #{($size / 3) + 1} rgba(map-get($colors, 'black'), 0.2), 0 0 0 1px rgba(map-get($colors, 'black'), 0.1);
+  }
+}

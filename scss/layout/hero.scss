@@ -64,7 +64,7 @@
   padding: 3rem 1.5rem;
 
   // Responsiveness
-  @include from($widescreen) {
+  @include from(map-get($media, 'widescreen')) {
     padding-left: 0;
     padding-right: 0;
   }
@@ -74,150 +74,35 @@
 
 .hero {
   align-items: stretch;
-  background-color: $white;
+  background-color: map-get($colors, 'white');
+  color: inherit;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   .nav {
     background: none;
-    box-shadow: 0 1px 0 rgba($border, 0.3);
   }
 
-  .tabs {
-    ul {
-      border-bottom: none;
-    }
+  .title {
+    color: inherit;
   }
 
-  // Colors
-  @each $name, $color in $colors {
+  .subtitle {
+    color: inherit;
+  }
 
-    &.is-#{$name} {
-      background-color: $color;
-
-      a:not(.button),
-      strong {
-        color: inherit;
-      }
-
-      .title {
-        color: findColorInvert($color);
-      }
-
-      .subtitle {
-        color: rgba(findColorInvert($color), 0.9);
-
-        a:not(.button),
-        strong {
-          color: findColorInvert($color);
-        }
-      }
-
-      .nav {
-        box-shadow: 0 1px 0 rgba(findColorInvert($color), 0.2);
-      }
-
-      .nav-menu {
-        @include mobile {
-          background-color: $color;
-        }
-      }
-
-      a.nav-item,
-      .nav-item a:not(.button) {
-        color: rgba(findColorInvert($color), 0.7);
-
-        &:hover,
-        &.is-active {
-          color: findColorInvert($color);
-        }
-      }
-
-      .tabs {
-        a {
-          color: findColorInvert($color);
-          opacity: 0.9;
-
-          &:hover {
-            opacity: 1;
-          }
-        }
-
-        li {
-          &.is-active a {
-            opacity: 1;
-          }
-        }
-
-        &.is-boxed,
-        &.is-toggle {
-          a {
-            color: findColorInvert($color);
-
-            &:hover {
-              background-color: rgba($black, 0.1);
-            }
-          }
-
-          li.is-active a {
-            &,
-            &:hover {
-              background-color: findColorInvert($color);
-              border-color: findColorInvert($color);
-              color: $color;
-            }
-          }
-        }
-      }
-
-      // Modifiers
-      &.is-bold {
-        $gradient-top-left: darken(saturate(adjust-hue($color, -10deg), 10%), 10%);
-        $gradient-bottom-right: lighten(saturate(adjust-hue($color, 10deg), 5%), 5%);
-
-        background-image: linear-gradient(141deg, $gradient-top-left 0%, $color 71%, $gradient-bottom-right 100%);
-
-        @include mobile {
-          .nav-menu {
-            background-image: linear-gradient(141deg, $gradient-top-left 0%, $color 71%, $gradient-bottom-right 100%);
-          }
-        }
-      }
-
-      // Responsiveness
-      @include mobile {
-        .nav-toggle {
-          span {
-            background-color: findColorInvert($color);
-          }
-
-          &:hover {
-            background-color: rgba($black, 0.1);
-          }
-
-          &.is-active {
-            span {
-              background-color: findColorInvert($color);
-            }
-          }
-        }
-
-        .nav-menu {
-          .nav-item {
-            border-top-color: rgba(findColorInvert($color), 0.2);
-          }
-        }
-      }
-    }
+  a:not(.button),
+  strong {
+    color: inherit;
   }
 
   // Sizes
   &.is-medium {
     @include tablet {
       .hero-body {
-        padding-bottom: 9rem;
-        padding-top: 9rem;
+        padding-bottom: map-get($sizes, 'large');
+        padding-top: map-get($sizes, 'large');
       }
     }
   }
@@ -225,15 +110,13 @@
   &.is-large {
     @include tablet {
       .hero-body {
-        padding-bottom: 18rem;
-        padding-top: 18rem;
+        padding-bottom: map-get($sizes, 'xlarge');
+        padding-top: map-get($sizes, 'xlarge');
       }
     }
   }
 
   &.is-fullheight {
-    min-height: 100vh;
-
     .hero-body {
       align-items: center;
       display: flex;

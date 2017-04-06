@@ -1,0 +1,11 @@
+.article {
+  padding: map-get($sizes, 'large') 0;
+
+  p {
+    padding-bottom: map-get($sizes, 'medium');
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}

@@ -4,6 +4,7 @@
 
 .container {
   position: relative;
+  color: inherit;
 
   @include desktop {
     margin: 0 auto;
@@ -12,9 +13,9 @@
 
     // Modifiers
     &.is-fluid {
-      margin: 0 20px;
+      margin: 0;
       max-width: none;
-      width: auto;
+      width: 100%;
     }
   }
 
@@ -43,10 +44,8 @@
 
 .heading {
   display: block;
-  font-size: 11px;
   letter-spacing: 1px;
-  margin-bottom: 5px;
-  text-transform: uppercase;
+  margin-bottom: map-get($sizes, 'medium');
 }
 
 .highlight {

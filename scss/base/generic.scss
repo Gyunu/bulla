@@ -1,12 +1,18 @@
 html {
-  background-color: $body-background;
-  font-size: $body-size;
+  background-color: map-get($colors, 'white');
+  font-size: $baseline-font;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   min-width: 300px;
   overflow-x: hidden;
   overflow-y: scroll;
-  text-rendering: $render-mode;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  font-family: map-get($fonts, 'primary');
+
+  * {
+    box-sizing: border-box;
+  }
 }
 
 article,
@@ -24,21 +30,21 @@ button,
 input,
 select,
 textarea {
-  font-family: $family-primary;
+  font-family: map-get($fonts, 'primary');
 }
 
 code,
 pre {
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: auto;
-  font-family: $family-code;
+  font-family: map-get($fonts, 'mono');
 }
 
 body {
   color: $text;
   font-size: 1rem;
-  font-weight: $weight-normal;
-  line-height: 1.5;
+  font-weight: 400;
+  line-height: 1.9;
 }
 
 // Inline
@@ -55,19 +61,19 @@ a {
 }
 
 code {
-  background-color: $code-background;
-  color: $code;
+  background-color: map-get($colors, 'grey');
+  color: map-get($colors, 'red');
   font-size: 0.8em;
   font-weight: normal;
-  padding: 0.25em 0.5em 0.25em;
+  padding: map-get($sizes, 'tiny');
 }
 
 hr {
-  background-color: $border;
+  background-color: map-get($colors, 'primary');
   border: none;
   display: block;
   height: 1px;
-  margin: 1.5rem 0;
+  margin: map-get($sizes, 'tiny'), 0;
 }
 
 img {
@@ -80,7 +86,7 @@ input[type="radio"] {
 }
 
 small {
-  font-size: 0.8em;
+  font-size: map-get($sizes, 'tiny');
 }
 
 span {
@@ -89,28 +95,24 @@ span {
 }
 
 strong {
-  color: $text-strong;
-  font-weight: $weight-bold;
+  font-weight: 700;
 }
 
 // Block
 
 pre {
-  background-color: $pre-background;
-  color: $pre;
   font-size: 0.8em;
   white-space: pre;
   word-wrap: normal;
 
   code {
     @include overflow-touch;
-
     background: none;
     color: inherit;
     display: block;
-    font-size: 1em;
+    font-size: map-get($sizes, 'medium');
     overflow-x: auto;
-    padding: 1.25rem 1.5rem;
+    padding: map-get($sizes, 'medium') map-get($sizes, 'medium');
   }
 }
 

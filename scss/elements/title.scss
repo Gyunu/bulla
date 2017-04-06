@@ -20,7 +20,7 @@ $subtitle-weight: $weight-light !default;
   }
 
   strong {
-    font-weight: $title-weight-bold;
+    font-weight: 700;
   }
 
   .tag {
@@ -29,14 +29,10 @@ $subtitle-weight: $weight-light !default;
 }
 
 .title {
-  color: $title;
+  color: inherit;
   font-size: $title-size;
   font-weight: $title-weight;
-  line-height: 1.125;
-
-  strong {
-    color: inherit;
-  }
+  line-height: inherit;
 
   & + .highlight {
     margin-top: -0.75rem;
@@ -57,14 +53,10 @@ $subtitle-weight: $weight-light !default;
 }
 
 .subtitle {
-  color: $subtitle;
+  color: inherit;
   font-size: $subtitle-size;
-  font-weight: $subtitle-weight;
+  font-weight: normal;
   line-height: 1.25;
-
-  strong {
-    color: $subtitle-strong;
-  }
 
   &:not(.is-spaced) + .title {
     margin-top: -1.5rem;
