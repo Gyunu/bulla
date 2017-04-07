@@ -49,6 +49,14 @@ body {
 
 // Inline
 
+p {
+  max-width: 760px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 a {
   color: $link;
   cursor: pointer;

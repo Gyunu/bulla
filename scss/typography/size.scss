@@ -1,0 +1,5 @@
+@each $name, $size in $sizes {
+  .is-#{$name}-text {
+    font-size: $size !important;
+  }
+}

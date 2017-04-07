@@ -7,7 +7,7 @@
     color: findColorInvert($color) !important;
   }
 
-  .has-#{$name}-text {
+  .is-#{$name}-text {
     color: $color!important;
   }
 

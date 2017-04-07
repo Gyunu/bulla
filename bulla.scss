@@ -2,11 +2,14 @@
 @charset "utf-8";
 
 @import 'scss/config';
-@import "scss/utilities/variables";
-@import "scss/utilities/animations";
-@import "scss/utilities/controls";
 @import "scss/utilities/functions";
 @import "scss/utilities/mixins";
+@import "scss/utilities/variables";
+@import "scss/base/minireset";
+@import "scss/base/generic";
+@import "scss/base/helpers";
+@import "scss/utilities/animations";
+@import "scss/utilities/controls";
 @import "scss/layout/footer";
 @import "scss/layout/hero";
 @import "scss/layout/section";
@@ -34,9 +37,6 @@
 @import "scss/components/pagination";
 @import "scss/components/panel";
 @import "scss/components/tabs";
-@import "scss/base/generic";
-@import "scss/base/helpers";
-@import "scss/base/minireset";
 
 
 //Extensions
@@ -46,3 +46,5 @@
 @import 'scss/layer/layer';
 @import 'scss/shadow/shadow';
 @import 'scss/layout/article';
+@import 'scss/typography/size';
+@import 'scss/typography/fonts';

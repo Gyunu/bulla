@@ -1,7 +1,6 @@
 .notification {
-  @include block;
 
-  background-color: $background;
+  background-color: inherit;
   border-radius: $radius;
   padding: 1.25rem 2.5rem 1.25rem 1.5rem;
   position: relative;
@@ -30,14 +29,5 @@
   .subtitle,
   .content {
     color: inherit;
-  }
-
-  // Colors
-  @each $name, $color in $colors {
-
-    &.is-#{$name} {
-      background-color: $color;
-      color: findColorInvert($color);
-    }
   }
 }

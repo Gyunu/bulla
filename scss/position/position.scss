@@ -1,5 +1,5 @@
 @each $p in $position {
   .is-#{$p} {
-    position: #{$p};
+    position: #{$p} !important;
   }
 }

@@ -1,49 +1,48 @@
 // Display
-
 @each $display, $prop in $displays {
   .is-#{$display} {
     display: #{$prop} !important;
-  }
 
-  .is-#{$display}-mobile {
-    @include mobile {
-      display: #{$prop} !important;
+    &-mobile {
+      @include mobile {
+        display: #{$prop} !important;
+      }
     }
-  }
 
-  .is-#{$display}-tablet {
-    @include tablet {
-      display: #{$prop} !important;
+    &-table {
+      @include tablet {
+        display: #{$prop} !important;
+      }
     }
-  }
 
-  .is-#{$display}-tablet-only {
-    @include tablet-only {
-      display: #{$prop} !important;
+    &-tablet-only {
+      @include tablet-only {
+        display: #{$prop} !important;
+      }
     }
-  }
 
-  .is-#{$display}-touch {
-    @include touch {
-      display: #{$prop} !important;
+    &-touch {
+      @include touch {
+        display: #{$prop} !important;
+      }
     }
-  }
 
-  .is-#{$display}-desktop {
-    @include desktop {
-      display: #{$prop} !important;
+    &-desktop {
+      @include desktop {
+        display: #{$prop} !important;
+      }
     }
-  }
 
-  .is-#{$display}-desktop-only {
-    @include desktop-only {
-      display: #{$prop} !important;
+    &-desktop-only {
+      @include desktop-only {
+        display: #{$prop} !important;
+      }
     }
-  }
 
-  .is-#{$display}-widescreen {
-    @include widescreen {
-      display: #{$prop} !important;
+    &-widescreen {
+      @include widescreen {
+        display: #{$prop} !important;
+      }
     }
   }
 }
@@ -86,21 +85,6 @@
 
 .has-text-right {
   text-align: right;
-}
-
-@each $name, $pair in $colors {
-  $color: nth($pair, 1);
-
-  .has-text-#{$name} {
-    color: $color;
-  }
-
-  a.has-text-#{$name} {
-    &:hover,
-    &:focus {
-      color: darken($color, 10%);
-    }
-  }
 }
 
 // Visibility
@@ -180,4 +164,20 @@
 
 .is-fullwidth {
   min-width: 100%;
+
+  p {
+    max-width: none;
+  }
+}
+
+.is-title-case {
+  text-transform: capitalize !important;
+}
+
+.is-lower-case {
+  text-transform: lowercase !important;
+}
+
+.is-upper-case, .is-caps {
+  text-transform: uppercase !important;
 }

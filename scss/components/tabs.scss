@@ -92,8 +92,13 @@
       border-radius: $radius $radius 0 0;
 
       &:hover {
-        background-color: $background;
-        border-bottom-color: $border;
+          color: map-get($colors, 'white');
+          background-color: rgba(map-get($colors, 'black'), 0.4);
+          mix-blend-mode: luminosity;
+          border-bottom-color: $border;
+        span {
+          isolation: isolate;
+        }
       }
     }
 
@@ -103,6 +108,11 @@
           background-color: $white;
           border-color: $border;
           border-bottom-color: transparent !important;
+
+          &:hover {
+            color: map-get($colors, 'primary');
+            mix-blend-mode: normal;
+          }
         }
       }
     }

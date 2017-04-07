@@ -3,7 +3,7 @@ $nav-height: 3.25rem !default;
 // Components
 
 .nav-toggle {
-  @include hamburger(map-get($sizes, 'large'));
+  @include hamburger(map-get($sizes, 'medium'));
 
   // Responsiveness
   @include tablet {
@@ -18,7 +18,7 @@ $nav-height: 3.25rem !default;
   flex-shrink: 0;
   justify-content: center;
   line-height: 1.5;
-  padding: map-get($sizes, 'large') map-get($sizes, 'large');
+  padding: map-get($sizes, 'medium') map-get($sizes, 'medium');
 
   a {
     flex-grow: 1;
@@ -51,7 +51,7 @@ a.nav-item {
 
   &:hover {
     color: map-get($colors, 'primary');
-    
+
   }
 
   // Modifiers
@@ -153,7 +153,7 @@ a.nav-item {
   & > .container {
     align-items: stretch;
     display: flex;
-    min-height: $nav-height;
+    min-height: map-get($sizes, 'medium');
     width: 100%;
   }
 }
