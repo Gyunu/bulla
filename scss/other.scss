@@ -1,37 +1,3 @@
-.block {
-  @include block;
-}
-
-.container {
-  position: relative;
-  color: inherit;
-
-  @include desktop {
-    margin: 0 auto;
-    max-width: $desktop - 40px;
-    width: $desktop - 40px;
-
-    // Modifiers
-    &.is-fluid {
-      margin: 0;
-      max-width: none;
-      width: 100%;
-    }
-  }
-
-
-  @include widescreen {
-    max-width: $widescreen - 40px;
-    width: $widescreen - 40px;
-  }
-
-
-  @include fullhd {
-    max-width: $fullhd - 40px;
-    width: $fullhd - 40px;
-  }
-}
-
 .delete {
   @include delete;
 }

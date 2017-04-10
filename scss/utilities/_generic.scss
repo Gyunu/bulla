@@ -69,7 +69,7 @@ a {
 }
 
 code {
-  background-color: map-get($colors, 'grey');
+  background-color: map-get($colors, 'white');
   color: map-get($colors, 'red');
   font-size: 0.8em;
   font-weight: normal;
@@ -77,11 +77,11 @@ code {
 }
 
 hr {
-  background-color: map-get($colors, 'primary');
+  background-color: map-get($colors, 'grey');
   border: none;
   display: block;
   height: 1px;
-  margin: map-get($sizes, 'tiny'), 0;
+  margin: map-get($sizes, 'xlarge') 0;
 }
 
 img {

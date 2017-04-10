@@ -1,0 +1,17 @@
+.is-clearfix {
+  @include clearfix;
+}
+
+.is-pulled-left,
+.is-left-floated {
+  float: left;
+}
+
+.is-pulled-right,
+.is-right-floated {
+  float: right;
+}
+
+.is-not-floated {
+  float: none;
+}

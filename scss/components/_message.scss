@@ -1,9 +1,9 @@
 .message {
-  @include block;
-
   background-color: $background;
   border-radius: $radius;
   font-size: $size-normal;
+
+  margin: map-get($sizes, 'xlarge') 0;
 
   // Colors
   @each $name, $color in $colors {
@@ -30,7 +30,7 @@
 
 .message-header {
   align-items: center;
-  background-color: $text;
+  background-color: inherit;
   border-radius: $radius $radius 0 0;
   color: $text-invert;
   display: flex;
@@ -38,6 +38,7 @@
   line-height: 1.25;
   padding: 0.5em 0.75em;
   position: relative;
+  max-width: none;
 
   a,
   strong {
@@ -62,10 +63,9 @@
 }
 
 .message-body {
-  border: 1px solid $border;
   border-radius: $radius;
-  color: $text;
   padding: 1em 1.25em;
+  max-width: none;
 
   a,
   strong {

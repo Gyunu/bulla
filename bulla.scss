@@ -2,49 +2,11 @@
 @charset "utf-8";
 
 @import 'scss/config';
-@import "scss/utilities/functions";
-@import "scss/utilities/mixins";
-@import "scss/utilities/variables";
-@import "scss/base/minireset";
-@import "scss/base/generic";
-@import "scss/base/helpers";
-@import "scss/utilities/animations";
-@import "scss/utilities/controls";
-@import "scss/layout/footer";
-@import "scss/layout/hero";
-@import "scss/layout/section";
-@import "scss/grid/columns";
-@import "scss/grid/tiles";
-@import "scss/elements/box";
-@import "scss/elements/button";
-@import "scss/elements/content";
-@import "scss/elements/form";
-@import "scss/elements/icon";
-@import "scss/elements/image";
-@import "scss/elements/notification";
-@import "scss/elements/other";
-@import "scss/elements/progress";
-@import "scss/elements/table";
-@import "scss/elements/tag";
-@import "scss/elements/title";
-@import "scss/components/card";
-@import "scss/components/level";
-@import "scss/components/media";
-@import "scss/components/menu";
-@import "scss/components/message";
-@import "scss/components/modal";
-@import "scss/components/nav";
-@import "scss/components/pagination";
-@import "scss/components/panel";
-@import "scss/components/tabs";
-
-
-//Extensions
-@import 'scss/position/position';
-@import 'scss/spacing/spacing';
-@import 'scss/color/color';
-@import 'scss/layer/layer';
-@import 'scss/shadow/shadow';
-@import 'scss/layout/article';
-@import 'scss/typography/size';
-@import 'scss/typography/fonts';
+@import 'scss/variables';
+@import 'scss/animations';
+@import 'scss/controls';
+@import 'scss/functions';
+@import 'scss/mixins';
+@import 'scss/other';
+@import 'scss/components';
+@import 'scss/utilities';
