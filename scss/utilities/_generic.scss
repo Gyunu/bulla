@@ -81,7 +81,7 @@ hr {
   border: none;
   display: block;
   height: 1px;
-  margin: map-get($sizes, 'xlarge') 0;
+  margin: map-get($sizes, 'large') 0;
 }
 
 img {
@@ -94,7 +94,7 @@ input[type="radio"] {
 }
 
 small {
-  font-size: map-get($sizes, 'tiny');
+  font-size: map-get($sizes, 'xsmall');
 }
 
 span {

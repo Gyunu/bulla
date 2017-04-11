@@ -2,6 +2,10 @@
   position: relative;
   color: inherit;
 
+  @include mobile {
+    padding: 0 map-get($sizes, 'medium');
+  }
+
   @include desktop {
     margin: 0 auto;
     max-width: map-get($media, 'desktop') - 40px;

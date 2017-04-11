@@ -1,22 +1,10 @@
-$title: $grey-darker !default;
-$title-size: $size-3 !default;
-$title-weight: $weight-light !default;
-$title-weight-bold: $weight-semibold !default;
-
-$subtitle: $grey-dark !default;
-$subtitle-size: $size-5 !default;
-$subtitle-strong: $grey-darker !default;
-$subtitle-weight: $weight-light !default;
-
 .title,
 .subtitle {
-  @include block;
-
   word-break: break-word;
 
   em,
   span {
-    font-weight: $title-weight;
+    font-weight: normal;
   }
 
   strong {
@@ -30,44 +18,19 @@ $subtitle-weight: $weight-light !default;
 
 .title {
   color: inherit;
-  font-size: $title-size;
-  font-weight: $title-weight;
-  line-height: inherit;
+  font-size: map-get($sizes, 'medium');
+  font-weight: normal;
+  line-height: 1;
 
   & + .highlight {
     margin-top: -0.75rem;
-  }
-
-  &:not(.is-spaced) + .subtitle {
-    margin-top: -1.5rem;
-  }
-
-  // Colors
-  @each $size in $sizes {
-    $i: index($sizes, $size);
-
-    &.is-#{$i} {
-      font-size: $size;
-    }
   }
 }
 
 .subtitle {
   color: inherit;
-  font-size: $subtitle-size;
+  font-size: map-get($sizes, 'small');
   font-weight: normal;
   line-height: 1.25;
-
-  &:not(.is-spaced) + .title {
-    margin-top: -1.5rem;
-  }
-
-  // Colors
-  @each $size in $sizes {
-    $i: index($sizes, $size);
-
-    &.is-#{$i} {
-      font-size: $size;
-    }
-  }
+  margin-bottom: map-get($sizes, 'medium');
 }

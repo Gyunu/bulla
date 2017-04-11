@@ -1,5 +1,4 @@
 .box {
-  @include block;
   background-color: map-get($colors, 'white');
   border-radius: map-get($sizes, 'tiny');
   display: block;

@@ -1,9 +1,7 @@
-$nav-height: 3.25rem !default;
-
 // Components
 
 .nav-toggle {
-  @include hamburger(map-get($sizes, 'medium'));
+  @include hamburger(map-get($sizes, 'xlarge'));
 
   // Responsiveness
   @include tablet {
@@ -42,6 +40,7 @@ $nav-height: 3.25rem !default;
   // Responsiveness
   @include mobile {
     justify-content: flex-start;
+    width: 100%;
   }
 }
 
@@ -95,6 +94,7 @@ a.nav-item {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 0;
+  flex-wrap: wrap;
 }
 
 .nav-left {
@@ -145,7 +145,7 @@ a.nav-item {
   align-items: stretch;
   background-color: map-get($colors, 'white');
   display: flex;
-  min-height: $nav-height;
+  min-height: map-get($sizes, 'large');
   position: relative;
   text-align: center;
   z-index: 2;
@@ -155,5 +155,10 @@ a.nav-item {
     display: flex;
     min-height: map-get($sizes, 'medium');
     width: 100%;
+
+    @include mobile {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
