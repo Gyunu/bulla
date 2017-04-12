@@ -4,20 +4,20 @@
 }
 
 .card-header-title {
+  @include has-colored-text('black');
+  @include has-padding('xsmall', 'every');
   align-items: center;
-  color: map-get($colors, 'black');
   display: flex;
   flex-grow: 1;
   font-weight: 700;
-  padding: map-get($sizes, 'xsmall');
 }
 
 .card-header-icon {
+  @include has-padding('tiny', 'every');
   align-items: center;
   cursor: pointer;
   display: flex;
   justify-content: center;
-  padding: map-get($sizes, 'tiny');
 }
 
 .card-image {
@@ -26,36 +26,36 @@
 }
 
 .card-content {
-  padding: 1.5rem;
+  @include has-padding('medium', 'every');
 }
 
 .card-footer {
-  border-top: 1px solid map-get($colors, 'grey');
+  @include has-border('tiny', 'grey', 'top');
   align-items: stretch;
   display: flex;
 }
 
 .card-footer-item {
+  @include has-padding('tiny', 'every');
   align-items: center;
   display: flex;
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 0;
   justify-content: center;
-  padding: map-get($sizes, 'tiny');
 
   &:not(:last-child) {
-    border-right: 1px solid map-get($colors, 'grey');
+    @include has-border('tiny', 'grey', 'right');
   }
 }
 
 .card {
-  background-color: map-get($colors, 'white');
-  color: map-get($colors, 'black');
+  @include has-colored-bg('white');
+  @include has-colored-text('black');
   max-width: 100%;
   position: relative;
 
   .media:not(:last-child) {
-    margin-bottom: map-get($sizes, 'xsmall');
+    @include has-margin('xsmall', 'bottom');
   }
 }

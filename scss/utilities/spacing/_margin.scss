@@ -4,25 +4,16 @@
     @each $size-letter, $size in $sizes {
 
       .has-#{$size-letter}-#{$position-name}-margin {
-        #{$m}: #{$size};
+        #{$m}: #{$size} !important;
       }
     }
   }
   @if(type-of($position-name) == 'map') {
 
     @if($position == 'every') {
-      $m1: positions('margin', map-get($position-name, '1'));
-      $m2: positions('margin', map-get($position-name, '2'));
-      $m3: positions('margin', map-get($position-name, '3'));
-      $m4: positions('margin', map-get($position-name, '4'));
-
       @each $size-letter, $size in $sizes {
-
         .has-#{$size-letter}-#{$position}-margin {
-          #{$m1}: #{$size};
-          #{$m2}: #{$size};
-          #{$m3}: #{$size};
-          #{$m4}: #{$size};
+          margin: #{$size} !important;
         }
       }
     }

@@ -1,19 +1,18 @@
 .box {
-  background-color: map-get($colors, 'white');
-  border-radius: map-get($sizes, 'tiny');
-  display: block;
-  padding: map-get($sizes, 'medium');
-  border: 1px solid rgba(map-get($colors, 'black'), 0.1);
-
+  @include has-colored-bg('white');
+  @include has-rounded-corners('tiny');
+  @include has-padding('medium', 'every');
+  @include has-border('tiny', 'black', 'every');
 }
 
 a.box {
+  display: block;
   &:hover,
   &:focus {
-    box-shadow: 0 2px 3px rgba(map-get($colors, 'black'), 0.1), 0 0 0 1px $link;
+    @include has-shadow('tiny');
   }
 
   &:active {
-    box-shadow: inset 0 1px 2px rgba(map-get($colors, 'black'), 0.2), 0 0 0 1px $link;
+    box-shadow: inset 0 1px 2px rgba(map-get($colors, 'black'), 0.2);
   }
 }

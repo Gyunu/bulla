@@ -21,7 +21,7 @@
 }
 
 .modal-close {
-  @include delete;
+  @include close;
 
   background: none;
   height: 40px;

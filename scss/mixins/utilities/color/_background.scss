@@ -1,0 +1,4 @@
+@mixin has-colored-bg($color) {
+  background-color: map-get($colors, $color);
+  color: findColorInvert(map-get($colors, $color));
+}

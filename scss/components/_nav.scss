@@ -16,7 +16,7 @@
   flex-shrink: 0;
   justify-content: center;
   line-height: 1.5;
-  padding: map-get($sizes, 'medium') map-get($sizes, 'medium');
+  padding: map-get($sizes, 'tiny') map-get($sizes, 'small');
 
   a {
     flex-grow: 1;
@@ -145,7 +145,7 @@ a.nav-item {
   align-items: stretch;
   background-color: map-get($colors, 'white');
   display: flex;
-  min-height: map-get($sizes, 'large');
+  min-height: map-get($sizes, 'small');
   position: relative;
   text-align: center;
   z-index: 2;

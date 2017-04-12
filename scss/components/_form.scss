@@ -1,51 +1,29 @@
-$input: $grey-darker !default;
-$input-background: $white !default;
-$input-border: $grey-lighter !default;
-
-$input-hover: $grey-darker !default;
-$input-hover-border: $grey-light !default;
-
-$input-focus: $grey-darker !default;
-$input-focus-border: $link !default;
-
-$input-disabled: $text-light !default;
-$input-disabled-background: $background !default;
-$input-disabled-border: $background !default;
-
-$input-arrow: $link !default;
-
-$input-icon: $grey-lighter !default;
-$input-icon-active: $grey !default;
-
-$input-radius: $radius !default;
-
 @mixin input {
   @include control;
-
-  background-color: $input-background;
-  border: 1px solid $input-border;
-  color: $input;
+  @include has-colored-bg('white');
+  @include has-border('tiny', 'grey', 'every');
+  @include has-colored-text('black');
 
   &:hover,
   &.is-hovered {
-    border-color: $input-hover-border;
+    @include has-border('tiny', 'black', 'every');
   }
 
   &:focus,
   &.is-focused,
   &:active,
   &.is-active {
-    border-color: $input-focus-border;
+    @include has-border('tiny', 'primary', 'every');
   }
 
   &[disabled] {
-    background-color: $input-disabled-background;
-    border-color: $input-disabled-border;
+    @include has-colored-bg('grey');
+    @include has-border('tiny', 'grey', 'every');
+    @include has-colored-text('grey');
     box-shadow: none;
-    color: $input-disabled;
 
     @include placeholder {
-      color: rgba($input, 0.3);
+      color: rgba(map-get($colors, 'black'), 0.3);
     }
   }
 }
@@ -59,15 +37,15 @@ $input-radius: $radius !default;
   width: 100%;
 
   &[type="search"] {
-    border-radius: 290486px;
+    @include has-rounded-corners('huge');
+    @include has-padding('small', 'left');
   }
 
   // Colors
-  @each $name, $pair in $colors {
-    $color: nth($pair, 1);
+  @each $name, $color in $colors {
 
     &.is-#{$name} {
-      border-color: $color;
+      @include has-border('tiny', $name, 'every');
     }
   }
 
@@ -84,12 +62,6 @@ $input-radius: $radius !default;
     @include control-large;
   }
 
-  // Modifiers
-  &.is-fullwidth {
-    display: block;
-    width: 100%;
-  }
-
   &.is-inline {
     display: inline;
     width: auto;
@@ -102,7 +74,6 @@ $input-radius: $radius !default;
   max-width: 100%;
   min-height: 120px;
   min-width: 100%;
-  padding: 0.625em;
   resize: vertical;
 }
 
@@ -123,11 +94,11 @@ $input-radius: $radius !default;
   }
 
   &:hover {
-    color: $input-hover;
+    @include has-colored-text('grey');
   }
 
   &[disabled] {
-    color: $input-disabled;
+    @include has-colored-text('grey');
     cursor: not-allowed;
   }
 }
@@ -145,7 +116,7 @@ $input-radius: $radius !default;
   vertical-align: top;
 
   &:after {
-    @include arrow($input-arrow);
+    @include arrow(map-get($colors, 'primary'));
 
     margin-top: -0.375em;
     right: 1.125em;
@@ -163,7 +134,7 @@ $input-radius: $radius !default;
     padding-right: 2.5em;
 
     &:hover {
-      border-color: $input-hover-border;
+      @include has-border('tiny', 'grey', 'every');
     }
 
     &::-ms-expand {
@@ -174,16 +145,15 @@ $input-radius: $radius !default;
   // States
   &:hover {
     &:after {
-      border-color: $input-hover;
+      @include has-border('tiny', 'grey', 'every');
     }
   }
 
   // Colors
-  @each $name, $pair in $colors {
-    $color: nth($pair, 1);
+  @each $name, $color in $colors {
 
     &.is-#{$name} select {
-      border-color: $color;
+      @include has-border('tiny', $name, 'every');
     }
   }
 
@@ -211,26 +181,21 @@ $input-radius: $radius !default;
 }
 
 .label {
-  color: $input;
+  @include has-colored-text('black');
+  margin: 0;
   display: block;
-  font-size: $size-normal;
-  font-weight: $weight-bold;
+  font-weight: 700;
 
-  &:not(:last-child) {
-    margin-bottom: 0.5em;
-  }
 }
 
 .help {
+  @include has-sized-text('small');
+  @include has-margin('tiny', 'top');
   display: block;
-  font-size: $size-small;
-  margin-top: 0.25rem;
 
-  @each $name, $pair in $colors {
-    $color: nth($pair, 1);
-
+  @each $name in $colors {
     &.is-#{$name} {
-      color: $color;
+      @include has-colored-text($name);
     }
   }
 }
@@ -258,8 +223,8 @@ $input-radius: $radius !default;
         .button,
         .input,
         .select select {
-          border-bottom-left-radius: $input-radius;
-          border-top-left-radius: $input-radius;
+          border-bottom-left-radius: map-get($sizes, 'tiny');
+          border-top-left-radius: map-get($sizes, 'tiny');
         }
       }
 
@@ -267,8 +232,8 @@ $input-radius: $radius !default;
         .button,
         .input,
         .select select {
-          border-bottom-right-radius: $input-radius;
-          border-top-right-radius: $input-radius;
+          border-bottom-right-radius: map-get($sizes, 'tiny');
+          border-top-right-radius: map-get($sizes, 'tiny');
         }
       }
 
@@ -419,7 +384,7 @@ $input-radius: $radius !default;
   // Modifiers
   &.has-icon {
     .icon {
-      color: $input-icon;
+      @include has-colored-text('grey');
       height: 2.25em;
       pointer-events: none;
       position: absolute;
@@ -431,25 +396,25 @@ $input-radius: $radius !default;
     .input {
       &:focus {
         & + .icon {
-          color: $input-icon-active;
+          @include has-colored-text('grey');
         }
       }
 
       &.is-small {
         & + .icon {
-          font-size: $size-small;
+          @include has-sized-text('small');
         }
       }
 
       &.is-medium {
         & + .icon {
-          font-size: $size-medium;
+          @include has-sized-text('medium');
         }
       }
 
       &.is-large {
         & + .icon {
-          font-size: $size-large;
+          @include has-sized-text('large');
         }
       }
     }
