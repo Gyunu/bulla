@@ -9,11 +9,8 @@
         padding: #{map-get($sizes, $size)};
       }
       @else {
-        $p1: positions('margin', map-get($p, '1'));
-        $p2: positions('margin', map-get($p, '2'));
-
-        #{$p1}: #{map-get($sizes, $size)};
-        #{$p2}: #{map-get($sizes, $size)};
+        #{map-get($p, "1")}: #{map-get($sizes, $size)};
+        #{map-get($p, "2")}: #{map-get($sizes, $size)};
       }
   }
 }

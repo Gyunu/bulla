@@ -19,5 +19,6 @@
       '2': #{$type}-bottom
     )
   );
+
   @return map-get($positions, $position);
 }

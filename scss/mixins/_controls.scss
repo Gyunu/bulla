@@ -6,7 +6,7 @@ $control-radius-small: $radius-small !default;
   -webkit-appearance: none;
   align-items: center;
   border: none;
-  border-radius: $control-radius;
+  border-radius: map-get($sizes, 'tiny');
   box-shadow: none;
   display: inline-flex;
   font-size: $size-normal;

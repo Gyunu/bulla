@@ -19,6 +19,7 @@
   @include has-border('tiny', 'grey', 'every');
   @include has-colored-text('black');
   @include has-padding('xsmall', 'every');
+  @include has-padding('small', 'bottom');
   cursor: pointer;
   justify-content: center;
   text-align: center;
@@ -62,16 +63,16 @@
 
   &:focus,
   &.is-focused {
-    @include has-border('tiny', 'primary', 'every');
-    @include has-shadow('tiny');
-    @include has-colored-text('primary');
+    // @include has-border('tiny', 'primary', 'every');
+    // @include has-shadow('tiny');
+    // @include has-colored-text('primary');
   }
 
   &:active,
   &.is-active {
     @include has-border('tiny', 'primary', 'every');
-    @include has-shadow('tiny');
     @include has-colored-text('primary');
+    box-shadow: inset 0 1px 2px rgba($black, 0.2);
   }
 
   &.is-link {
@@ -95,6 +96,21 @@
       border-color: transparent;
       box-shadow: none;
     }
+  }
+
+  &.is-group {
+    border-radius: 0;
+
+    &:first-child {
+      border-top-left-radius: map-get($sizes, 'tiny');
+      border-bottom-left-radius: map-get($sizes, 'tiny');
+    }
+
+    &:last-child {
+      border-top-right-radius: map-get($sizes, 'tiny');
+      border-bottom-right-radius: map-get($sizes, 'tiny');
+    }
+
   }
 
   @each $name, $color in $colors {
@@ -223,6 +239,7 @@
   }
 
   &.is-fullwidth {
+    @include has-margin('tiny', 'bottom')
     display: flex;
     width: 100%;
   }
@@ -245,5 +262,5 @@ button.button,
 input[type="submit"].button {
   line-height: 1;
   padding-bottom: 0.4em;
-  padding-top: 0.35em;
+  padding-top: 0.3em;
 }
