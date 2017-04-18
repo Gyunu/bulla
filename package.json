@@ -44,8 +44,8 @@
   },
   "files": [
     "css",
-    "sass",
-    "bulma.sass",
+    "scss",
+    "bulla.scss",
     "LICENSE",
     "README.md"
   ]
