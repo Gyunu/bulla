@@ -3,15 +3,15 @@
 
   .main {
     @extend .column;
-    @extend .is-6;
+    @extend .is-5;
   }
 
   .sidebar {
     @extend .column;
-    @extend .is-3;
+    @extend .is-2;
 
     &:last-child {
-      @extend .is-3;
+      @extend .is-5;
     }
   }
 }
