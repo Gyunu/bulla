@@ -2,25 +2,16 @@
   max-width: 130em;
   margin: 0 auto;
   .main {
-    @include desktop {
-      flex: none;
-      width: 5 / $columns * 100%;
-      margin-left: 2 / $columns * 100%;
-    }
+    @extend .column;
+    @extend .is-8-tablet;
+    @extend .is-5-desktop;
+    @extend .is-offset-2-desktop;
 
-    @include tablet {
-        width: 8 / $columns * 100%;
-    }
   }
 
   .sidebar {
-    @include desktop {
-      flex: none;
-      width: 3 / $columns * 100%;
-    }
-
-    @include tablet {
-        width: 4 / $columns * 100%;
-    }
+    @extend .column;
+    @extend .is-4-tablet;
+    @extend .is-3-desktop;
   }
 }
