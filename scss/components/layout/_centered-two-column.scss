@@ -1,6 +1,7 @@
 .centered-two-column-layout {
   max-width: 130em;
   margin: 0 auto;
+  display: flex;
   .main {
     @extend .column;
     @extend .is-8-tablet;
