@@ -9,7 +9,7 @@ a.box {
   display: block;
   &:hover,
   &:focus {
-    @include has-shadow('tiny');
+    @include has-shadow('primary');
   }
 
   &:active {
