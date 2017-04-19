@@ -274,14 +274,14 @@
       margin-left: 25%;
     }
 
-    @for $i from 1 through 12 {
+    @for $i from 1 through $columns {
       &.is-#{$i}-desktop {
         flex: none;
-        width: $i / 12 * 100%;
+        width: $i / $columns * 100%;
       }
 
       &.is-offset-#{$i}-desktop {
-        margin-left: $i / 12 * 100%;
+        margin-left: $i / $columns * 100%;
       }
     }
   }
