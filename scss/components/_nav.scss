@@ -17,6 +17,8 @@
   justify-content: center;
   line-height: 1.5;
   padding: map-get($sizes, 'tiny') map-get($sizes, 'small');
+  width: 100%;
+  overflow-y: scroll;
 
   a {
     flex-grow: 1;
@@ -91,11 +93,8 @@ a.nav-item {
 .nav-right {
   align-items: stretch;
   display: flex;
-  flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 0;
-  width: 100%;
-  overflow-y: scroll;
 }
 
 .nav-left {
