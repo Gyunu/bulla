@@ -3,30 +3,30 @@
     $p: positions('padding', $position);
     @each $size-letter, $size in $sizes {
       .has-#{$size-letter}-#{$position-name}-padding {
-        #{$p}: #{$size} !important;
+        #{$p}: #{$size};
       }
 
       @include mobile {
         .has-#{$size-letter}-#{$position-name}-padding-mobile {
-          #{$p}: #{$size} !important;
+          #{$p}: #{$size};
         }
       }
 
       @include tablet {
         .has-#{$size-letter}-#{$position-name}-padding-tablet {
-          #{$p}: #{$size} !important;
+          #{$p}: #{$size};
         }
       }
 
       @include desktop {
         .has-#{$size-letter}-#{$position-name}-padding-desktop {
-          #{$p}: #{$size} !important;
+          #{$p}: #{$size};
         }
       }
 
       @include fullhd {
         .has-#{$size-letter}-#{$position-name}-padding-fullhd {
-          #{$p}: #{$size} !important;
+          #{$p}: #{$size};
         }
       }
     }
@@ -42,50 +42,50 @@
       @each $size-letter, $size in $sizes {
 
         .has-#{$size-letter}-padding {
-          padding: #{$size} !important;
-          #{$p1}: #{$size} !important;
-          #{$p2}: #{$size} !important;
-          #{$p3}: #{$size} !important;
-          #{$p4}: #{$size} !important;
+          padding: #{$size};
+          #{$p1}: #{$size};
+          #{$p2}: #{$size};
+          #{$p3}: #{$size};
+          #{$p4}: #{$size};
         }
 
         @include mobile {
           .has-#{$size-letter}-padding-mobile {
-            padding: #{$size} !important;
-            #{$p1}: #{$size} !important;
-            #{$p2}: #{$size} !important;
-            #{$p3}: #{$size} !important;
-            #{$p4}: #{$size} !important;
+            padding: #{$size};
+            #{$p1}: #{$size};
+            #{$p2}: #{$size};
+            #{$p3}: #{$size};
+            #{$p4}: #{$size};
           }
         }
 
         @include tablet {
           .has-#{$size-letter}-padding-tablet {
-            padding: #{$size} !important;
-            #{$p1}: #{$size} !important;
-            #{$p2}: #{$size} !important;
-            #{$p3}: #{$size} !important;
-            #{$p4}: #{$size} !important;
+            padding: #{$size};
+            #{$p1}: #{$size};
+            #{$p2}: #{$size};
+            #{$p3}: #{$size};
+            #{$p4}: #{$size};
           }
         }
 
         @include desktop {
           .has-#{$size-letter}-padding-desktop {
-            padding: #{$size} !important;
-            #{$p1}: #{$size} !important;
-            #{$p2}: #{$size} !important;
-            #{$p3}: #{$size} !important;
-            #{$p4}: #{$size} !important;
+            padding: #{$size};
+            #{$p1}: #{$size};
+            #{$p2}: #{$size};
+            #{$p3}: #{$size};
+            #{$p4}: #{$size};
           }
         }
 
         @include fullhd {
           .has-#{$size-letter}-padding-fullhd {
-            padding: #{$size} !important;
-            #{$p1}: #{$size} !important;
-            #{$p2}: #{$size} !important;
-            #{$p3}: #{$size} !important;
-            #{$p4}: #{$size} !important;
+            padding: #{$size};
+            #{$p1}: #{$size};
+            #{$p2}: #{$size};
+            #{$p3}: #{$size};
+            #{$p4}: #{$size};
           }
         }
       }
@@ -96,35 +96,35 @@
 
       @each $size-letter, $size in $sizes {
         .has-#{$size-letter}-#{$position}-padding {
-          #{$p1}: #{$size} !important;
-          #{$p2}: #{$size} !important;
+          #{$p1}: #{$size};
+          #{$p2}: #{$size};
         }
 
         @include mobile {
           .has-#{$size-letter}-#{$position}-padding-mobile {
-            #{$p1}: #{$size} !important;
-            #{$p2}: #{$size} !important;
+            #{$p1}: #{$size};
+            #{$p2}: #{$size};
           }
         }
 
         @include tablet {
           .has-#{$size-letter}-#{$position}-padding-tablet {
-            #{$p1}: #{$size} !important;
-            #{$p2}: #{$size} !important;
+            #{$p1}: #{$size};
+            #{$p2}: #{$size};
           }
         }
 
         @include desktop {
           .has-#{$size-letter}-#{$position}-padding-desktop {
-            #{$p1}: #{$size} !important;
-            #{$p2}: #{$size} !important;
+            #{$p1}: #{$size};
+            #{$p2}: #{$size};
           }
         }
 
         @include fullhd {
           .has-#{$size-letter}-#{$position}-padding-fullhd {
-            #{$p1}: #{$size} !important;
-            #{$p2}: #{$size} !important;
+            #{$p1}: #{$size};
+            #{$p2}: #{$size};
           }
         }
       }
