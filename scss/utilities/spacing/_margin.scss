@@ -4,30 +4,30 @@
     @each $size-letter, $size in $sizes {
 
       .has-#{$size-letter}-#{$position-name}-margin {
-        #{$m}: #{$size} !important;
+        #{$m}: #{$size};
       }
 
       @include mobile {
         .has-#{$size-letter}-#{$position-name}-margin-mobile {
-          #{$m}: #{$size} !important;
+          #{$m}: #{$size};
         }
       }
 
       @include tablet {
         .has-#{$size-letter}-#{$position-name}-margin-tablet {
-          #{$m}: #{$size} !important;
+          #{$m}: #{$size};
         }
       }
 
       @include desktop {
         .has-#{$size-letter}-#{$position-name}-margin-desktop {
-          #{$m}: #{$size} !important;
+          #{$m}: #{$size};
         }
       }
 
       @include fullhd {
         .has-#{$size-letter}-#{$position-name}-margin-fullhd {
-          #{$m}: #{$size} !important;
+          #{$m}: #{$size};
         }
       }
     }
@@ -42,8 +42,8 @@
 
       @each $size-letter, $size in $sizes {
         .has-#{$size-letter}-margin {
-          margin: #{$size} !important;
-          #{$m1}: #{$size} !important;
+          margin: #{$size};
+          #{$m1}: #{$size};
           #{$m2}: #{$size};
           #{$m3}: #{$size};
           #{$m4}: #{$size};
@@ -51,41 +51,41 @@
 
         @include mobile {
           .has-#{$size-letter}-margin-mobile {
-            margin: #{$size} !important;
-            #{$m1}: #{$size} !important;
-            #{$m2}: #{$size} !important;
-            #{$m3}: #{$size} !important;
-            #{$m4}: #{$size} !important;
+            margin: #{$size};
+            #{$m1}: #{$size};
+            #{$m2}: #{$size};
+            #{$m3}: #{$size};
+            #{$m4}: #{$size};
           }
         }
 
         @include tablet {
           .has-#{$size-letter}-margin-tablet {
-            margin: #{$size} !important;
-            #{$m1}: #{$size} !important;
-            #{$m2}: #{$size} !important;
-            #{$m3}: #{$size} !important;
-            #{$m4}: #{$size} !important;
+            margin: #{$size};
+            #{$m1}: #{$size};
+            #{$m2}: #{$size};
+            #{$m3}: #{$size};
+            #{$m4}: #{$size};
           }
         }
 
         @include desktop {
           .has-#{$size-letter}-margin-desktop {
-            margin: #{$size} !important;
-            #{$m1}: #{$size} !important;
-            #{$m2}: #{$size} !important;
-            #{$m3}: #{$size} !important;
-            #{$m4}: #{$size} !important;
+            margin: #{$size};
+            #{$m1}: #{$size};
+            #{$m2}: #{$size};
+            #{$m3}: #{$size};
+            #{$m4}: #{$size};
           }
         }
 
         @include fullhd {
           .has-#{$size-letter}-margin-fullhd {
-            margin: #{$size} !important;
-            #{$m1}: #{$size} !important;
-            #{$m2}: #{$size} !important;
-            #{$m3}: #{$size} !important;
-            #{$m4}: #{$size} !important;
+            margin: #{$size};
+            #{$m1}: #{$size};
+            #{$m2}: #{$size};
+            #{$m3}: #{$size};
+            #{$m4}: #{$size};
           }
         }
       }
@@ -97,35 +97,35 @@
       @each $size-letter, $size in $sizes {
 
         .has-#{$size-letter}-#{$position}-margin {
-          #{$m1}: #{$size} !important;
-          #{$m2}: #{$size} !important;
+          #{$m1}: #{$size};
+          #{$m2}: #{$size};
         }
 
         @include mobile {
           .has-#{$size-letter}-#{$position}-margin-mobile {
-            #{$m1}: #{$size} !important;
-            #{$m2}: #{$size} !important;
+            #{$m1}: #{$size};
+            #{$m2}: #{$size};
           }
         }
 
         @include tablet {
           .has-#{$size-letter}-#{$position}-margin-tablet {
-            #{$m1}: #{$size} !important;
-            #{$m2}: #{$size} !important;
+            #{$m1}: #{$size};
+            #{$m2}: #{$size};
           }
         }
 
         @include desktop {
           .has-#{$size-letter}-#{$position}-margin-desktop {
-            #{$m1}: #{$size} !important;
-            #{$m2}: #{$size} !important;
+            #{$m1}: #{$size};
+            #{$m2}: #{$size};
           }
         }
 
         @include fullhd {
           .has-#{$size-letter}-#{$position}-margin-fullhd {
-            #{$m1}: #{$size} !important;
-            #{$m2}: #{$size} !important;
+            #{$m1}: #{$size};
+            #{$m2}: #{$size};
           }
         }
       }
