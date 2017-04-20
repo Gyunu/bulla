@@ -69,6 +69,7 @@ $shadows: map-merge($shadows-default, $shadows);
 
 
 $size-default: (
+  'no': 0,
   'tiny': $baseline * .2,
   'xsmall': $baseline * .4,
   'small': $baseline * .6,
