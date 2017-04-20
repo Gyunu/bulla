@@ -8,25 +8,25 @@
 
       @include mobile {
         .has-#{$size-letter}-#{$position-name}-padding-mobile {
-          #{$p}: #{$size};
+          #{$p}: #{$size} !important;
         }
       }
 
       @include tablet {
         .has-#{$size-letter}-#{$position-name}-padding-tablet {
-          #{$p}: #{$size};
+          #{$p}: #{$size} !important;
         }
       }
 
       @include desktop {
         .has-#{$size-letter}-#{$position-name}-padding-desktop {
-          #{$p}: #{$size};
+          #{$p}: #{$size} !important;
         }
       }
 
       @include fullhd {
         .has-#{$size-letter}-#{$position-name}-padding-fullhd {
-          #{$p}: #{$size};
+          #{$p}: #{$size} !important;
         }
       }
     }
@@ -51,41 +51,41 @@
 
         @include mobile {
           .has-#{$size-letter}-padding-mobile {
-            padding: #{$size};
-            #{$p1}: #{$size};
-            #{$p2}: #{$size};
-            #{$p3}: #{$size};
-            #{$p4}: #{$size};
+            padding: #{$size} !important;
+            #{$p1}: #{$size} !important;
+            #{$p2}: #{$size} !important;
+            #{$p3}: #{$size} !important;
+            #{$p4}: #{$size} !important;
           }
         }
 
         @include tablet {
           .has-#{$size-letter}-padding-tablet {
-            padding: #{$size};
-            #{$p1}: #{$size};
-            #{$p2}: #{$size};
-            #{$p3}: #{$size};
-            #{$p4}: #{$size};
+            padding: #{$size} !important;
+            #{$p1}: #{$size} !important;
+            #{$p2}: #{$size} !important;
+            #{$p3}: #{$size} !important;
+            #{$p4}: #{$size} !important;
           }
         }
 
         @include desktop {
           .has-#{$size-letter}-padding-desktop {
-            padding: #{$size};
-            #{$p1}: #{$size};
-            #{$p2}: #{$size};
-            #{$p3}: #{$size};
-            #{$p4}: #{$size};
+            padding: #{$size} !important;
+            #{$p1}: #{$size} !important;
+            #{$p2}: #{$size} !important;
+            #{$p3}: #{$size} !important;
+            #{$p4}: #{$size} !important;
           }
         }
 
         @include fullhd {
           .has-#{$size-letter}-padding-fullhd {
-            padding: #{$size};
-            #{$p1}: #{$size};
-            #{$p2}: #{$size};
-            #{$p3}: #{$size};
-            #{$p4}: #{$size};
+            padding: #{$size} !important;
+            #{$p1}: #{$size} !important;
+            #{$p2}: #{$size} !important;
+            #{$p3}: #{$size} !important;
+            #{$p4}: #{$size} !important;
           }
         }
       }
@@ -96,35 +96,35 @@
 
       @each $size-letter, $size in $sizes {
         .has-#{$size-letter}-#{$position}-padding {
-          #{$p1}: #{$size};
-          #{$p2}: #{$size};
+          #{$p1}: #{$size} !important;
+          #{$p2}: #{$size} !important;
         }
 
         @include mobile {
           .has-#{$size-letter}-#{$position}-padding-mobile {
-            #{$p1}: #{$size};
-            #{$p2}: #{$size};
+            #{$p1}: #{$size} !important;
+            #{$p2}: #{$size} !important;
           }
         }
 
         @include tablet {
           .has-#{$size-letter}-#{$position}-padding-tablet {
-            #{$p1}: #{$size};
-            #{$p2}: #{$size};
+            #{$p1}: #{$size} !important;
+            #{$p2}: #{$size} !important;
           }
         }
 
         @include desktop {
           .has-#{$size-letter}-#{$position}-padding-desktop {
-            #{$p1}: #{$size};
-            #{$p2}: #{$size};
+            #{$p1}: #{$size} !important;
+            #{$p2}: #{$size} !important;
           }
         }
 
         @include fullhd {
           .has-#{$size-letter}-#{$position}-padding-fullhd {
-            #{$p1}: #{$size};
-            #{$p2}: #{$size};
+            #{$p1}: #{$size} !important;
+            #{$p2}: #{$size} !important;
           }
         }
       }
