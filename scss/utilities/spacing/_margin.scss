@@ -8,25 +8,25 @@
       }
 
       @include mobile {
-        .has-#{$size-letter}-#{$position-name}-margin-only-mobile {
+        .has-#{$size-letter}-#{$position-name}-margin-mobile {
           #{$m}: #{$size} !important;
         }
       }
 
       @include tablet {
-        .has-#{$size-letter}-#{$position-name}-margin-only-tablet {
+        .has-#{$size-letter}-#{$position-name}-margin-tablet {
           #{$m}: #{$size} !important;
         }
       }
 
       @include desktop {
-        .has-#{$size-letter}-#{$position-name}-margin-only-desktop {
+        .has-#{$size-letter}-#{$position-name}-margin-desktop {
           #{$m}: #{$size} !important;
         }
       }
 
       @include fullhd {
-        .has-#{$size-letter}-#{$position-name}-margin-only-fullhd {
+        .has-#{$size-letter}-#{$position-name}-margin-fullhd {
           #{$m}: #{$size} !important;
         }
       }
@@ -50,7 +50,7 @@
         }
 
         @include mobile {
-          .has-#{$size-letter}-margin-only-mobile {
+          .has-#{$size-letter}-margin-mobile {
             margin: #{$size} !important;
             #{$m1}: #{$size} !important;
             #{$m2}: #{$size} !important;
@@ -60,7 +60,7 @@
         }
 
         @include tablet {
-          .has-#{$size-letter}-margin-only-tablet {
+          .has-#{$size-letter}-margin-tablet {
             margin: #{$size} !important;
             #{$m1}: #{$size} !important;
             #{$m2}: #{$size} !important;
@@ -70,7 +70,7 @@
         }
 
         @include desktop {
-          .has-#{$size-letter}-margin-only-desktop {
+          .has-#{$size-letter}-margin-desktop {
             margin: #{$size} !important;
             #{$m1}: #{$size} !important;
             #{$m2}: #{$size} !important;
@@ -80,7 +80,7 @@
         }
 
         @include fullhd {
-          .has-#{$size-letter}-margin-only-fullhd {
+          .has-#{$size-letter}-margin-fullhd {
             margin: #{$size} !important;
             #{$m1}: #{$size} !important;
             #{$m2}: #{$size} !important;
@@ -102,28 +102,28 @@
         }
 
         @include mobile {
-          .has-#{$size-letter}-#{$position}-margin-only-mobile {
+          .has-#{$size-letter}-#{$position}-margin-mobile {
             #{$m1}: #{$size} !important;
             #{$m2}: #{$size} !important;
           }
         }
 
         @include tablet {
-          .has-#{$size-letter}-#{$position}-margin-only-tablet {
+          .has-#{$size-letter}-#{$position}-margin-tablet {
             #{$m1}: #{$size} !important;
             #{$m2}: #{$size} !important;
           }
         }
 
         @include desktop {
-          .has-#{$size-letter}-#{$position}-margin-only-desktop {
+          .has-#{$size-letter}-#{$position}-margin-desktop {
             #{$m1}: #{$size} !important;
             #{$m2}: #{$size} !important;
           }
         }
 
         @include fullhd {
-          .has-#{$size-letter}-#{$position}-margin-only-fullhd {
+          .has-#{$size-letter}-#{$position}-margin-fullhd {
             #{$m1}: #{$size} !important;
             #{$m2}: #{$size} !important;
           }
