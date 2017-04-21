@@ -16,6 +16,10 @@ $fonts: map-merge($fonts-default, $fonts);
 /// For things like margings, padding and font size.
 $baseline-font: 16px !default;
 $baseline: 2rem !default;
+
+// The max width when on super wide screen
+$max-width: 130em !default;
+
 // This is the amount of columns defined for the grid system
 $columns: 12 !default;
 //layers - z-index
