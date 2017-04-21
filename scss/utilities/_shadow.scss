@@ -1,4 +1,5 @@
 @each $name, $shadow in $shadows {
   .has-#{$name}-shadow {
     box-shadow: $shadow;
+  }
 }
