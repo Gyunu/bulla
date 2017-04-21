@@ -2,8 +2,16 @@
   @if(type-of($position-name) == 'string') {
     $p: positions('padding', $position);
     @each $size-letter, $size in $sizes {
-      .has-#{$size-letter}-#{$position-name}-padding {
-        #{$p}: #{$size};
+
+      @if($size-letter == 'no') {
+        .has-#{$size-letter}-#{$position-name}-padding {
+          #{$m}: #{$size} !important;
+        }
+      }
+      @else {
+        .has-#{$size-letter}-#{$position-name}-padding {
+          #{$m}: #{$size};
+        }
       }
 
       @include mobile {
