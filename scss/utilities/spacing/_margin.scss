@@ -3,8 +3,15 @@
     $m: positions('margin', $position);
     @each $size-letter, $size in $sizes {
 
-      .has-#{$size-letter}-#{$position-name}-margin {
-        #{$m}: #{$size};
+      @if($size-letter == 'no') {
+        .has-#{$size-letter}-#{$position-name}-margin {
+          #{$m}: #{$size} !important;
+        }
+      }
+      @else {
+        .has-#{$size-letter}-#{$position-name}-margin {
+          #{$m}: #{$size};
+        }
       }
 
       @include mobile {
