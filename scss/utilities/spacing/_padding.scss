@@ -5,12 +5,12 @@
 
       @if($size-letter == 'no') {
         .has-#{$size-letter}-#{$position-name}-padding {
-          #{$m}: #{$size} !important;
+          #{$p}: #{$size} !important;
         }
       }
       @else {
         .has-#{$size-letter}-#{$position-name}-padding {
-          #{$m}: #{$size};
+          #{$p}: #{$size};
         }
       }
 
