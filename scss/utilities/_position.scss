@@ -1,5 +1,39 @@
 @each $p in $position {
   .is-#{$p} {
     position: #{$p} !important;
+
+    @if($p == 'fixed' or 'absolute') {
+      &.is-top {
+        top: 0 !important;
+
+        &-right {
+          right: 0 !important;
+        }
+
+        &-left {
+          left: 0 !important;
+        }
+      }
+
+      &.is-left {
+        left: 0 !important;
+      }
+
+      &.is-right {
+        right: 0 !important;
+      }
+
+      &.is-bottom {
+        bottom: 0 !important;
+
+        &-right {
+          right: 0 !important;
+        }
+
+        &-left {
+          left: 0 !important;
+        }
+      }
+    }
   }
 }
