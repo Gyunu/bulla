@@ -2,13 +2,11 @@
   @include clearfix;
 }
 
-.is-pulled-left,
-.is-left-floated {
+.is-pulled-left {
   float: left;
 }
 
-.is-pulled-right,
-.is-right-floated {
+.is-pulled-right {
   float: right;
 }
 

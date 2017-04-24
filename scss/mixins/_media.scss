@@ -1,11 +1,11 @@
 @mixin from($device) {
-  @media screen and (min-width: $device) {
+  @media screen and (min-width: map-get($media, $device)) {
     @content;
   }
 }
 
 @mixin until($device) {
-  @media screen and (max-width: $device - 1px) {
+  @media screen and (max-width: map-get($media, $device) - 1px) {
     @content;
   }
 }
