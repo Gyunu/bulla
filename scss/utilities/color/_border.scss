@@ -4,21 +4,21 @@
       @if(type-of($position-name) == 'string') {
         $b1: positions('border', $position);
         .has-#{$size}-#{$name}-#{$position-name}-border {
-          #{$b1}: #{$size-name / 4} solid #{$color} !important;
+          #{$b1}: #{$size-name / 8} solid #{$color} !important;
         }
       }
       @if(type-of($position-name) == 'map') {
         @if($position == 'every') {
-          .has-#{$size}-#{$name}-#{$position}-border {
-            border: #{$size-name / 4} solid #{$color} !important;
+          .has-#{$size}-#{$name}-border {
+            border: #{$size-name / 8} solid #{$color} !important;
           }
         }
         @else {
           $b1: positions('border', map-get($position-name, '1'));
           $b2: positions('border', map-get($position-name, '2'));
           .has-#{$size}-#{$name}-#{$position}-border {
-            #{$b1}: #{$size-name / 4} solid #{$color} !important;
-            #{$b2}: #{$size-name / 4} solid #{$color} !important;
+            #{$b1}: #{$size-name / 8} solid #{$color} !important;
+            #{$b2}: #{$size-name / 8} solid #{$color} !important;
           }
         }
       }
