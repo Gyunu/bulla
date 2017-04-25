@@ -10,7 +10,7 @@
       }
       @else {
         .has-#{$size-letter}-#{$position-name}-padding {
-          #{$p}: #{$size};
+          #{$p}: #{$size} !important;
         }
       }
 
@@ -50,11 +50,11 @@
       @each $size-letter, $size in $sizes {
 
         .has-#{$size-letter}-padding {
-          padding: #{$size};
-          #{$p1}: #{$size};
-          #{$p2}: #{$size};
-          #{$p3}: #{$size};
-          #{$p4}: #{$size};
+          padding: #{$size} !important;
+          #{$p1}: #{$size} !important;
+          #{$p2}: #{$size} !important;
+          #{$p3}: #{$size} !important;
+          #{$p4}: #{$size} !important;
         }
 
         @include mobile {

@@ -10,7 +10,7 @@
       }
       @else {
         .has-#{$size-letter}-#{$position-name}-margin {
-          #{$m}: #{$size};
+          #{$m}: #{$size} !important;
         }
       }
 
@@ -49,11 +49,11 @@
 
       @each $size-letter, $size in $sizes {
         .has-#{$size-letter}-margin {
-          margin: #{$size};
-          #{$m1}: #{$size};
-          #{$m2}: #{$size};
-          #{$m3}: #{$size};
-          #{$m4}: #{$size};
+          margin: #{$size} !important;
+          #{$m1}: #{$size} !important;
+          #{$m2}: #{$size} !important;
+          #{$m3}: #{$size} !important;
+          #{$m4}: #{$size} !important;
         }
 
         @include mobile {
@@ -104,8 +104,8 @@
       @each $size-letter, $size in $sizes {
 
         .has-#{$size-letter}-#{$position}-margin {
-          #{$m1}: #{$size};
-          #{$m2}: #{$size};
+          #{$m1}: #{$size} !important;
+          #{$m2}: #{$size} !important;
         }
 
         @include mobile {
