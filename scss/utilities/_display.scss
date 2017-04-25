@@ -8,7 +8,7 @@
       }
     }
 
-    &-table {
+    &-tablet {
       @include tablet {
         display: #{$prop} !important;
       }
