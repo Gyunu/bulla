@@ -30,13 +30,13 @@
         @if(type-of($position) == 'string') {
           $b1: positions('border', $position-name);
           .has-#{$size-name}-#{$color-name}-#{$position-name}-border {
-            #{$b1}: $size !important;
+            #{$b1}: $size solid #{$color} !important;
           }
         }
         @else {
           @if($position-name == 'every') {
             .has-#{$size-name}-#{$color-name}-border {
-              border: #{$size};
+              border: $size solid #{$color} !important;
             }
           }
           @else {
