@@ -9,7 +9,6 @@ $fonts-default: (
 
 $fonts: () !default;
 $fonts: map-merge($fonts-default, $fonts);
-@debug $fonts;
 // Sizes
 
 /// This is the baseline size used to base other measurements on.
@@ -118,9 +117,7 @@ $media: (
 
 $displays: (
   'inline': 'inline',
-  'inline-b': 'inline-block',
   'block': 'block',
-  'none': 'none',
 );
 
 $weights: (
