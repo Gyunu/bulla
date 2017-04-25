@@ -1,6 +1,6 @@
 @mixin has-margin($size, $position) {
   $m: positions('margin', $position);
-  
+
   @if(type-of($m) == 'string') {
     #{$m}: #{map-get($sizes, $size)};
   }
