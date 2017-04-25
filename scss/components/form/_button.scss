@@ -238,7 +238,6 @@
   }
 
   &.is-fullwidth {
-    @include has-margin('tiny', 'bottom')
     display: flex;
     width: 100%;
   }
