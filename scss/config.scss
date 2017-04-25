@@ -41,18 +41,9 @@ $color-names: (
   'red': #F4655B
 );
 
-$color-interface: (
-  'primary': map-get($color-names, 'turquoise'),
-  'info': map-get($color-names, 'blue'),
-  'success': map-get($color-names, 'green'),
-  'warning': map-get($color-names, 'yellow'),
-  'danger': map-get($color-names, 'red')
-);
-
 $colors: () !default;
 
 $colors: map-merge($color-names, $colors);
-$colors: map-merge($color-interface, $colors);
 
 $shadows-default: (
   'primary': ''
