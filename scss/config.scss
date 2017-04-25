@@ -44,9 +44,7 @@ $colors: () !default;
 
 $colors: map-merge($color-names, $colors);
 
-$shadows-default: (
-  'primary': ''
-);
+$shadows-default: ();
 
 //0 #{map-get($sizes, $size) / 3} #{map-get($sizes, $size) / 3) + 1} rgba(map-get($colors, 'black'), 0.2), 0 0 0 1px rgba(map-get($colors, 'black'), 0.1)
 

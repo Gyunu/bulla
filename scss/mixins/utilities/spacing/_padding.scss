@@ -1,5 +1,5 @@
 @mixin has-padding($size, $position) {
-  $p: positions('padding', map-get($positions, $position));
+  $p: positions('padding', $position);
 
   @if(type-of($p) == 'string') {
     #{$p}: #{map-get($sizes, $size)};
