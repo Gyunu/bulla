@@ -3,6 +3,54 @@
     position: #{$p} !important;
 
     @if($p == 'fixed' or 'absolute') {
+      @include mobile {
+        &-mobile {
+        position: #{$p} !important;
+        }
+      }
+
+      @include tablet {
+        &-tablet {
+        position: #{$p} !important;
+        }
+      }
+
+      @include tablet-only {
+        &-tablet-only {
+        position: #{$p} !important;
+        }
+      }
+
+      @include desktop {
+        &-desktop {
+        position: #{$p} !important;
+        }
+      }
+
+      @include desktop-only {
+        &-desktop-only {
+        position: #{$p} !important;
+        }
+      }
+
+      @include widescreen {
+        &-widescreen {
+        position: #{$p} !important;
+        }
+      }
+
+      @include widescreen-only {
+        &-widescreen-only {
+        position: #{$p} !important;
+        }
+      }
+
+      @include fullhd {
+        &-fullhd {
+        position: #{$p} !important;
+        }
+      }
+
       &.is-top {
         top: 0 !important;
 
