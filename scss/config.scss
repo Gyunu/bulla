@@ -62,14 +62,14 @@ $shadows: map-merge($shadows-default, $shadows);
 
 $size-default: (
   'no': 0,
-  'tiny': $baseline * .2,
-  'xsmall': $baseline * .4,
-  'small': $baseline * .6,
+  'tiny': 1px,
+  'xsmall': $baseline * .6,
+  'small': $baseline * .8,
   'medium': $baseline,
   'large': $baseline * 1.3,
-  'xlarge': $baseline * 2,
-  'huge': $baseline * 3,
-  'giant': $baseline * 5,
+  'xlarge': $baseline * 1.6,
+  'huge': $baseline * 2.5,
+  'giant': $baseline * 3,
 );
 
 $sizes: () !default;
