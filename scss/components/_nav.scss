@@ -103,6 +103,7 @@ a.nav-item {
     padding-right: map-get($sizes, 'small');
     padding-top: map-get($sizes, 'small');
 
+
     &:hover {
       border-bottom-color: map-get($colors, 'primary');
       border-top-color: transparent;
@@ -111,6 +112,7 @@ a.nav-item {
     &.is-active {
       border-bottom: 3px solid map-get($colors, 'primary');
       color: map-get($colors, 'primary');
+      mix-blend-mode: initial;
     }
   }
 
