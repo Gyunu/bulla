@@ -58,13 +58,13 @@ p {
 }
 
 a {
-  color: $link;
+  color: map-get($colors, 'primary');
   cursor: pointer;
   text-decoration: none;
   transition: none $speed $easing;
 
   &:hover {
-    color: $link-hover;
+    color: darken(map-get($colors, 'primary'), 10);
   }
 }
 
