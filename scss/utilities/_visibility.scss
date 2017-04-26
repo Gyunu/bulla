@@ -5,3 +5,7 @@
 .is-invisible {
   visibility: hidden;
 }
+
+.is-ignored {
+  pointer-events: none;
+}
