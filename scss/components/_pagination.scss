@@ -2,7 +2,7 @@
   font-size: map-get($sizes, 'medium');
 
   // Sizes
-  @each $size-name $size in $sizes {
+  @each $size-name, $size in $sizes {
     &.is-#{$size-name} {
       font-size: $size;
     }
