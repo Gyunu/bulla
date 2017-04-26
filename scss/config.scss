@@ -38,12 +38,22 @@ $color-names: (
   'blue': #69D2E7,
   'purple': #9C8AF4,
   'red': #F4655B,
-  'primary': #69D2E7
+);
+
+
+$color-interface: (
+ 'primary': map-get($color-names, 'blue'),
+ 'info': map-get($color-names, 'turquoise'),
+ 'success': map-get($color-names, 'green'),
+ 'warning': map-get($color-names, 'yellow'),
+ 'danger': map-get($color-names, 'red')
 );
 
 $colors: () !default;
 
+$colors: map-merge($color-interface, $colors);
 $colors: map-merge($color-names, $colors);
+
 
 $shadows-default: ();
 
