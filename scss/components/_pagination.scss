@@ -1,42 +1,17 @@
-$pagination: $grey-darker !default;
-$pagination-background: $white !default;
-$pagination-border: $grey-lighter !default;
-
-$pagination-hover: $link-hover !default;
-$pagination-hover-border: $link-hover-border !default;
-
-$pagination-focus: $link-focus !default;
-$pagination-focus-border: $link-focus-border !default;
-
-$pagination-active: $link-active !default;
-$pagination-active-border: $link-active-border !default;
-
-$pagination-disabled: $grey !default;
-$pagination-disabled-background: $grey-lighter !default;
-$pagination-disabled-border: $grey-lighter !default;
-
-$pagination-current: $link-invert !default;
-$pagination-current-background: $link !default;
-$pagination-current-border: $link !default;
-
-$pagination-ellipsis: $grey-light !default;
-
-$pagination-shadow-inset: inset 0 1px 2px rgba($black, 0.2);
-
 .pagination {
-  font-size: $size-normal;
+  font-size: map-get($sizes, 'medium');
 
   // Sizes
   &.is-small {
-    font-size: $size-small;
+    font-size: map-get($sizes, 'small');
   }
 
   &.is-medium {
-    font-size: $size-medium;
+    font-size: map-get($sizes, 'medium');
   }
 
   &.is-large {
-    font-size: $size-large;
+    font-size: map-get($sizes, 'large');
   }
 }
 
@@ -65,27 +40,27 @@ $pagination-shadow-inset: inset 0 1px 2px rgba($black, 0.2);
 .pagination-previous,
 .pagination-next,
 .pagination-link {
-  border: 1px solid $pagination-border;
+  border: 1px solid map-get($colors, 'grey');
   min-width: 2.25em;
 
   &:hover {
-    border-color: $pagination-hover-border;
-    color: $pagination-hover;
+    border-color: map-get($colors, 'primary');
+    color: map-get($colors, 'black');
   }
 
   &:focus {
-    border-color: $pagination-focus-border;
+    border-color: map-get($colors, 'primary');
   }
 
   &:active {
-    box-shadow: $pagination-shadow-inset;
+    box-shadow: map-get($colors, 'grey');
   }
 
   &[disabled] {
-    background-color: $pagination-disabled-background;
-    border-color: $pagination-border;
+    background-color: map-get($colors, 'grey');
+    border-color: map-get($colors, 'grey');
     box-shadow: none;
-    color: $pagination-disabled;
+    color: map-get($colors, 'black');
     opacity: 0.5;
   }
 }
@@ -98,14 +73,14 @@ $pagination-shadow-inset: inset 0 1px 2px rgba($black, 0.2);
 
 .pagination-link {
   &.is-current {
-    background-color: $pagination-current-background;
-    border-color: $pagination-current-border;
-    color: $pagination-current;
+    background-color: map-get($colors, 'white');
+    border-color: map-get($colors, 'primary');
+    color: map-get($colors, 'primaru');
   }
 }
 
 .pagination-ellipsis {
-  color: $pagination-ellipsis;
+  color: map-get($colors, 'primary');
   pointer-events: none;
 }
 

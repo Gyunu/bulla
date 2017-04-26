@@ -71,10 +71,23 @@
 .nav-item a,
 a.nav-item {
   color: inherit;
+  transition: background-color .3s ease-out;
 
   &:hover {
-    color: map-get($colors, 'primary');
+    transition: background-color .3s ease-out;
+    color: map-get($colors, 'white');
+    background-color: rgba(map-get($colors, 'white'), 0.2);
+    mix-blend-mode: luminosity;
+    border-bottom-color: $border;
 
+    span {
+      isolation: isolate;
+    }
+  }
+
+  &:active {
+    transition: background-color .3s ease-out;
+    background-color: rgba(map-get($colors, 'black'), 0.2);
   }
 
   // Modifiers
