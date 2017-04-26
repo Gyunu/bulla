@@ -2,16 +2,10 @@
   font-size: map-get($sizes, 'medium');
 
   // Sizes
-  &.is-small {
-    font-size: map-get($sizes, 'small');
-  }
-
-  &.is-medium {
-    font-size: map-get($sizes, 'medium');
-  }
-
-  &.is-large {
-    font-size: map-get($sizes, 'large');
+  @each $size-name $size in $sizes {
+    &.is-#{$size-name} {
+      font-size: $size;
+    }
   }
 }
 
